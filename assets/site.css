@@ -52,3 +52,14 @@
 @keyframes butterflyTint{0%{filter:hue-rotate(0deg) drop-shadow(0 0 8px #f5d9a6dd)}50%{filter:hue-rotate(35deg) drop-shadow(0 0 13px #dfcaeddd)}100%{filter:hue-rotate(70deg) drop-shadow(0 0 9px #b8dbd2dd)}}
 @media(max-width:720px){.orb{width:48px;height:43px;opacity:.8}.orb:nth-child(n+3){display:none}}
 @media(prefers-reduced-motion:reduce){.orb,.orb .wing{animation:none!important}.orb{opacity:.65}}
+
+/* Founder portrait shared by homepage and About page. Keep full photo uncropped. */
+.founder-intro{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:clamp(24px,5vw,75px);align-items:center;margin:36px 0 60px}
+.founder-photo{margin:0;max-width:510px}
+.founder-photo img{display:block;width:100%;height:auto;max-height:640px;object-fit:contain;border-radius:14px;background:#e6e9df;box-shadow:0 22px 55px #1c382528}
+.founder-photo figcaption{font-size:.82rem;color:#6d796e;letter-spacing:.08em;margin-top:12px}
+.home-founder-photo{display:block;justify-self:center;width:min(100%,470px);border-radius:15px;overflow:hidden;box-shadow:0 24px 60px #1c38252f;transition:transform .45s,box-shadow .45s}
+.home-founder-photo img{display:block;width:100%;height:auto;max-height:570px;object-fit:contain;background:#e6e9df}
+.home-founder-photo:hover,.home-founder-photo:focus-visible{transform:translateY(-6px);box-shadow:0 30px 65px #1c382544}
+@media(max-width:720px){.founder-intro{grid-template-columns:1fr;margin:28px 0 44px}.founder-photo{max-width:480px}.home-founder-photo{width:min(100%,430px)}}
+@media(prefers-reduced-motion:reduce){.home-founder-photo{transition:none}}
